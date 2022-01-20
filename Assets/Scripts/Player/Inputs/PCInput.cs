@@ -22,6 +22,7 @@ namespace Player.Inputs
                 jumpInput.Trigger();
             }
         }
-    }
+    
 #endif
+    }
 }

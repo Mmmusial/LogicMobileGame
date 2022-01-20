@@ -534,7 +534,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 2.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -843,6 +843,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Hope that you remember level arrangement.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152130457130697493, guid: 230643a90d9426f468d5b03b9e80bf8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -35.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152130457130697493, guid: 230643a90d9426f468d5b03b9e80bf8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -51
       objectReference: {fileID: 0}
     - target: {fileID: 2152130457939372170, guid: 230643a90d9426f468d5b03b9e80bf8e,
         type: 3}

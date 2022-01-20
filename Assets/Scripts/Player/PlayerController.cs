@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Player.Inputs;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace Player
         [SerializeField] private TriggerChannel jumpInput;
         [SerializeField] private float decelerationSpeed;
         [SerializeField] private LayerMask groundLayer;
-        [SerializeField] private Transform groundCheck;
+        [SerializeField] private Transform[] groundChecks;
         [SerializeField] private float maxMoveSpeed;
         [SerializeField] private float moveSpeed;
         [SerializeField] private float jumpPower;
@@ -50,7 +51,7 @@ namespace Player
                 return;
             }
 
-            if (!Physics2D.Raycast(groundCheck.position, Vector2.down, Height, groundLayer))
+            if (groundChecks.All(groundCheck => !Physics2D.Raycast(groundCheck.position, Vector2.down, Height, groundLayer)))
             {
                 return;
             }

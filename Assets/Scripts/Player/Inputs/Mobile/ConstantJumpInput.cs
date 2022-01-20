@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player.Inputs.Mobile
 {
@@ -6,7 +7,14 @@ namespace Player.Inputs.Mobile
     {
         [SerializeField] private TriggerChannel jumpChannel;
 
-        private void Update()
+        private const float Interval = 0.5f;
+        
+        private void Start()
+        {
+            InvokeRepeating(nameof(Trigger), Interval, Interval);
+        }
+
+        private void Trigger()
         {
             jumpChannel.Trigger();
         }
